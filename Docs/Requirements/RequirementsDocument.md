@@ -41,7 +41,6 @@ Prepared by:
 ----
 # 1. Introduction
 
-Provide a short description of the software being specified. Describe its purpose, including relevant benefits, objectives, and goals.
 
 Our project aims to create an online application system for students to apply to teaching assistant positions and have professors for those courses accept or deny applications. The purpose of creating this application is to streamline the process for finding PLAs, a process that as of now is mostly manual. In the application we hope to provide a simple way for students to enter their info and help to match them to a PLA postition best suited for them. Once the student choses positions to apply to professors will be able to look through applicants for their courses and chose to accept or deny them. 
 
@@ -53,7 +52,7 @@ This section specifies the software product's requirements. Specify all of the s
 
 ## 2.1 Customer, Users, and Stakeholders
 
-A brief description of the customer, stakeholders, and users of your software.
+
 
 The customers/users for our software will be the students of WPI and the professors of WPI. They will be the only users as you will need a wpi email to sign onto the software. The main stakeholders in the software would be WPI administration as this would add a better process for PLA applications and would be better for the students and professors.
 
@@ -88,16 +87,27 @@ Student:
 
 Instructor:
   3. As an instructor, I want to view PLA applicants for my courses, so that I can select students to PLA for my course.
+
   3. As an instructor, I want to be able to activate my account so that I can access the PLA application system.
+
   3. As an instructor, I want to be able to log in with my WPI sso so that I can access my account securely.
+
   3. As an instructor, I want to be able to view my profile, so that I can see my courses and other information.
+
   3. As an instructor, I want to be able to edit my profile, so that I can change courses I am instructing or any other information.
+
   3. As an instructor, I want to be able to add course sections, so that I can open new PLA positions for them.
+
   3. As an instructor, I want to be able to open new PLA positions for the courses I run, so that students can apply to them.
+
   3. As an instructor, I want to be able to see available applicants for my PLA positions, so that I can approve new students.
+
   3. As an instructor, I want to be able to see the profile of applicants so that I can approve an applicant best fit for my class.
+
   3. As an instructor, I want to be able to approve a PLA application so that I can send a response to the applicant and have them as my course PLA.
+
   3. As an instructor, I want to be able to deny a PLA applicant, so that the student can have their application status updated.
+
   3. As an instructor, I want to be able to log out of my account securely so that no one besides me can access it.
 
 ----
