@@ -238,7 +238,8 @@ You may use Figma to design your interface:
 ----
 # 4. Product Backlog
 
-Here you should include a link to your GitHub repo issues page, i.e., your product backlog. Make sure to create an issue for each user story.  
+Here you should include a link to your GitHub repo issues page, i.e., your product backlog. Make sure to create an issue for each user story.
+https://github.com/jwasilnak/CS3733_TermProject/issues
 
 ----
 # 5. References
