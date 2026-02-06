@@ -34,8 +34,8 @@ Prepared by:
 
 | Name | Date | Changes | Version |
 | ------ | ------ | --------- | --------- |
-|Revision 1 |2026-1-30 |Initial draft | 1.0        |
-|      |      |         |         |
+|Revision 1 |2026-1-30 |Initial draft     | 1.0    |
+|Revision 2 |2026-2-5  |Submission Version|2.0     |
 |      |      |         |         |
 
 ----
@@ -58,8 +58,7 @@ The customers/users for our software will be the students of WPI and the profess
 
 ----
 ## 2.2 User Stories
-This section will include the user stories you identified for your project. Make sure to write your user stories in the form : 
-"As a **[Role]**, I want **[Feature]** so that **[Reason/Benefit]** "
+
 
 New User:
   1. As an new user, I want to register for an account so that I can access the PLA application system.
@@ -114,33 +113,6 @@ Instructor:
 
 ----
 ## 2.3 Use Cases
-
-This section will include the specification for your project in the form of use cases. 
-
-Group the related user stories and provide a use case for each user story group. You don't need to draw the use-case diagram for the use cases; you will only provide the textual descriptions.  **Also, you don't need to include the use cases for "registration" and "login" use cases for both student and faculty users.**
-
-  * First, provide a short description of the actors involved (e.g., regular user, administrator, etc.) and then follow with a list of the use cases.
-  * Then, for each use case, include the following:
-
-    * Name,
-    * Participating actors,
-    * Entry condition(s) (in what system state is this use case applicable),
-    * Exit condition(s) (what is the system state after the use case is done),
-    * Flow of events (how will the user interact with the system; list the user actions and the system responses to those),
-    * Alternative flow of events (what are the exceptional cases in the flow of events and they will be handles)
-    * Iteration # (which sprint do you plan to work on this use case) 
-
-
-| Use case # 1      |   |
-| ------------------ |--|
-| Name              | "enter your reponse here"  |
-| Participating actor  | "enter your reponse here"  |
-| Entry condition(s)     | "enter your reponse here"  |
-| Exit condition(s)           | "enter your reponse here"  |
-| Flow of events | "enter your reponse here"  |
-| Alternative flow of events    | "enter your reponse here"  |
-| Iteration #         | "enter your reponse here"  |
-
 
 
 | Use case # 1      |   |
@@ -217,13 +189,112 @@ Group the related user stories and provide a use case for each user story group.
 
 | Use case # 8      |   |
 | ------------------ |--|
-| Name              |   |
-| Participating actor  |   |
-| Entry condition(s)     |   |
-| Exit condition(s)           |   |
-| Flow of events |   |
+| Name              |  View applications |
+| Participating actor  | Student  |
+| Entry condition(s)     | Student clicks check applications button |
+| Exit condition(s)           | System displays up to date status of student's applications |
+| Flow of events | user clicks check applications button, db retrieves data for student's applications latest version, system formats the applications, system displays applications |
+| Alternative flow of events    |   |
+| Iteration #         | 1 |
+
+
+| Use case # 9      |   |
+| ------------------ |--|
+| Name              | View applicants |
+| Participating actor  | Instructor |
+| Entry condition(s)     | Instructor clicks on button for a courses applicants |
+| Exit condition(s)           | System displays all the applicants |
+| Flow of events | User clicks on view applicants button for a desired course, db retrieves all the application data associated with the course, system formats the applicants, system displays applicants |
+| Alternative flow of events    |   |
+| Iteration #         | 2 |
+
+| Use case # 10      |   |
+| ------------------ |--|
+| Name              | View profile |
+| Participating actor  | Instructor |
+| Entry condition(s)     | Instructor clicks on view profile button from index |
+| Exit condition(s)           | System displays instructor's profile |
+| Flow of events | User clicks on view profile, db looks for user's information in instructors table, system formats information, system displays profile |
+| Alternative flow of events    |   |
+| Iteration #         | 1 |
+
+| Use case # 11      |   |
+| ------------------ |--|
+| Name              | Edit profile |
+| Participating actor  | Instructor |
+| Entry condition(s)     | Instructor on profile page clicks edit profile  |
+| Exit condition(s)           |  System flashes success message |
+| Flow of events | Instructor clicks edit profile button on their profile, instructor fills out edit profile form, instructor hits submit button, db adds adn commits new info to the instructor's profile, system flashes success message |
+| Alternative flow of events    |   |
+| Iteration #         | 1 |
+
+| Use case # 12      |   |
+| ------------------ |--|
+| Name              | Add course  |
+| Participating actor  | Instructor |
+| Entry condition(s)     | Instructor clicks add course on profile button |
+| Exit condition(s)           | System flashes success message |
+| Flow of events | User clicks add course button, user fills out course form, user submits form, db adds new course to course table, system flashes success message |
+| Alternative flow of events    |   |
+| Iteration #         | 2 |
+
+| Use case # 13      |   |
+| ------------------ |--|
+| Name              | View applicants |
+| Participating actor  | Instructor |
+| Entry condition(s)     |  On a course instructor will click view applicants button |
+| Exit condition(s)           | List of applicants displayed |
+| Flow of events | User clicks on the view applicants button for a course, db retrieves all the stored applications for that course, system formats the applicants, system displays applicants  |
+| Alternative flow of events    |   |
+| Iteration #         | 2 |
+
+
+| Use case # 14       |   |
+| ------------------ |--|
+| Name              | Accept |
+| Participating actor  | Instructor |
+| Entry condition(s)     | Instructor clicks accept for an applicant |
+| Exit condition(s)           | System flashes a success message |
+| Flow of events | User finds an applicant they accept, db updates the application info to accepted, system flashes a success message |
+| Alternative flow of events    |   |
+| Iteration #         | 2 |
+
+
+| Use case #  15      |   |
+| ------------------ |--|
+| Name              | Deny |
+| Participating actor  | Instructor |
+| Entry condition(s)     | Instructor clicks deny button |
+| Exit condition(s)           | a flash message is displayed |
+| Flow of events | The user clicks the deny button a applicant, the db updates the application with the denied status, the system flashes a success message |
 | Alternative flow of events    |   |
 | Iteration #         |  |
+
+
+| Use case # 16        |   |
+| ------------------ |--|
+| Name              | Logout |
+| Participating actor  | Student, Instructor |
+| Entry condition(s)     | User clicks logout button |
+| Exit condition(s)           | System reroutes to sign in page |
+| Flow of events | User clicks the logout button, system re routes and displays the sign in page |
+| Alternative flow of events    |   |
+| Iteration #         |  |
+
+
+| Use case # 17       |   |
+| ------------------ |--|
+| Name              | Widthdrawl |
+| Participating actor  | Student |
+| Entry condition(s)     | Student clicks widthdrawl application on one of their applications |
+| Exit condition(s)           | Flash message is sent |
+| Flow of events | User clicks widthdrawl application button on one of their applications, confirmation button is displayed, user confirms, db removes the application, system displays a success flash message |
+| Alternative flow of events    |   |
+| Iteration #         | 2 |
+
+
+
+
 
 # 3. User Interface
 
@@ -243,11 +314,6 @@ Here you should include a link to your GitHub repo issues page, i.e., your produ
 ----
 # 5. References
 
-Cite your references here.
-
-For the papers you cite give the authors, the title of the article, the journal name, journal volume number, date of publication and inclusive page numbers. Giving only the URL for the journal is not appropriate.
-
-For the websites, give the title, author (if applicable) and the website URL.
 
 ----
 ----
